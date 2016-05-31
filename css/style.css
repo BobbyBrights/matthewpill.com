@@ -1,0 +1,193 @@
+/* --------------------------
+  General
+--------------------------- */
+
+@font-face {
+font-family: Brown;
+src: url("/fonts/Brown-Regular.otf") format("opentype");
+}
+
+@font-face {
+font-family: Brown;
+font-weight: bold;
+src: url("/fonts/Brown-Bold.otf") format("opentype");
+}
+
+/* --------------------------
+  Base
+--------------------------- */
+
+body {
+  font-family: Brown, Helvetica, Verdana;
+  color: #52bd7f;
+  padding-top: 60px;
+	background: #fdf7ef;
+}
+
+.content {
+  margin: auto 15%;
+}
+
+svg {
+	margin: auto;
+  width: 100%;
+}
+
+.splash_copy {
+  margin: auto;
+}
+
+.splash_copy h1,
+.splash_copy p {
+  text-align: center;
+}
+
+.splash_copy h1 {
+  font-size: 12em;
+}
+
+.splash_copy p {
+  font-size: 1.2em;
+}
+
+.splash_copy a {
+  color: #2e6947;
+}
+
+/* --------------------------
+  Keyframes
+--------------------------- */
+
+@keyframes grow {
+  0% {
+    transform: scale(0);
+  }
+  30% {
+    transform: scale(1.05);
+  }
+  60% {
+    transform: scale(0.9);
+  }
+}
+
+@keyframes offset {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fill-it {
+  100% {
+    fill :#5CD28E;
+  }
+}
+
+@keyframes pulse {
+  0%{
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes turn {
+  0%{
+    transform: rotate(0) scale(0);
+    opacity: 0;
+  }
+  60%{
+    transform: rotate(375deg) scale(1.1);
+  }
+  80%{
+    transform: rotate(355deg) scale(0.9);
+  }
+  100%{
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+/* --------------------------
+  SVG Styles
+--------------------------- */
+
+.logo * {
+  transform-origin: 50% 50%;
+}
+
+.innerLine, .letterM, .letterP {
+  fill: #5CD28E;
+}
+
+.outerCircle {
+  stroke: #5CD28E;
+  stroke-width: 2;
+  stroke-dasharray: 900;
+  stroke-dashoffset: 900;
+  
+  animation: offset 1.6s linear forwards, fill-it .8s 2s forwards;
+}
+
+.innerLine {
+  animation: turn 1.1s .2s ease-out backwards;
+}
+
+.letterM, .letterP {
+  animation: grow 1s ease-out backwards;
+}
+
+.letterM {
+  animation-delay: .6s;
+}
+
+.letterP {
+  animation-delay: .9s;
+}
+
+.circles .st0 {
+  transform: scale(0);
+  animation: grow 4s 2s infinite;
+}
+
+.circles path:nth-of-type(2) {
+    animation-delay: 1.6s;
+    animation: grow 1s ease-out backwards;
+  }
+
+
+
+
+
+
+@media only screen and (max-width: 1024px) {
+  svg {
+    width: 50%;
+    display: block;
+    margin: auto;
+  }
+}
+
+@media only screen and (max-width: 699px) {
+  .splash_copy h1 {
+    font-size: 8em;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .splash_copy h1 {
+    font-size: 3em;
+  }
+}
+
+
+
+
