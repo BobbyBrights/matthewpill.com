@@ -131,8 +131,8 @@ svg {
 .outerCircle {
   stroke: #5CD28E;
   stroke-width: 2;
-  stroke-dasharray: 900;
-  stroke-dashoffset: 900;
+  stroke-dasharray: 905;
+  stroke-dashoffset: 905;
   
   animation: offset 1.6s linear forwards, fill-it .8s 2s forwards;
 }
