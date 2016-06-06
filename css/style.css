@@ -43,11 +43,11 @@ svg {
 }
 
 .splash_copy h1 {
-  font-size: 12em;
+  font-size: 9em;
 }
 
 .splash_copy p {
-  font-size: 1.2em;
+  font-size: 1.4em;
 }
 
 .splash_copy a {
@@ -178,7 +178,7 @@ svg {
 
 @media only screen and (max-width: 699px) {
   .splash_copy h1 {
-    font-size: 8em;
+    font-size: 7em;
   }
 }
 
