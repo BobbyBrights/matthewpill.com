@@ -24,6 +24,10 @@ body {
 	background: #b7d5e3;
 }
 
+h3 {
+  text-align: center;
+}
+
 .content {
   margin: auto 15%;
 }
